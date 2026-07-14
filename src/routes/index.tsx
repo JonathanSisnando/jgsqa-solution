@@ -247,6 +247,58 @@ function Services() {
   );
 }
 
+function PortfolioCard({ title, tag, description, url, index }: {
+  title: string; tag: string; description: string; url: string; index: number
+}) {
+  const [screenshot, setScreenshot] = useState("");
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false`)
+      .then((r) => r.json())
+      .then((d) => { if (d?.data?.screenshot?.url) setScreenshot(d.data.screenshot.url); })
+      .catch(() => {});
+  }, [url]);
+
+  return (
+    <Reveal delay={index * 100}>
+      <a href={url} target="_blank" rel="noreferrer" className="group block h-full">
+        <div className="card-surface card-hover card-top-bar flex h-full flex-col overflow-hidden p-0">
+          <div className="relative aspect-video w-full overflow-hidden bg-[var(--surface-2)]">
+            {screenshot && (
+              <img
+                src={screenshot}
+                alt={title}
+                onLoad={() => setLoaded(true)}
+                className={`h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0"}`}
+              />
+            )}
+            {!loaded && (
+              <div className="flex h-full items-center justify-center">
+                <Globe size={28} className="text-[var(--foreground)]/20" />
+              </div>
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)]/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-[var(--neon)]/90 px-3 py-1.5 text-[11px] font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <ArrowRight size={13} /> {lang === "pt" ? "Acessar" : "Visit"}
+            </div>
+          </div>
+          <div className="flex flex-1 flex-col p-6 pt-5">
+            <div className="mb-3 inline-flex self-start rounded-full border border-[var(--foreground)]/10 px-3 py-1 text-[10px] font-semibold tracking-widest text-[var(--foreground)]/60">
+              {tag}
+            </div>
+            <h3 className="text-xl font-bold">{title}</h3>
+            <p className="mt-2 flex-1 text-sm text-[var(--foreground)]/60">{description}</p>
+            <div className="mt-5 flex items-center gap-2 text-sm text-[var(--neon)]">
+              <CheckCircle2 size={16} /> {lang === "pt" ? "Entregue e ativo" : "Delivered and live"}
+            </div>
+          </div>
+        </div>
+      </a>
+    </Reveal>
+  );
+}
+
 function Portfolio() {
   const { t, lang } = useLang();
   return (
@@ -259,18 +311,7 @@ function Portfolio() {
         />
         <div className="grid gap-6 md:grid-cols-3">
           {t.portfolio.map((p: typeof t.portfolio[0], i: number) => (
-            <Reveal key={p.title} delay={i * 100}>
-              <div className="card-surface card-hover card-top-bar h-full p-7">
-                <div className="mb-4 inline-flex rounded-full border border-[var(--foreground)]/10 px-3 py-1 text-[10px] font-semibold tracking-widest text-[var(--foreground)]/60">
-                  {p.tag}
-                </div>
-                <h3 className="text-xl font-bold">{p.title}</h3>
-                <p className="mt-2 text-sm text-[var(--foreground)]/60">{p.description}</p>
-                <div className="mt-6 flex items-center gap-2 text-sm text-[var(--neon)]">
-                  <CheckCircle2 size={16} /> {lang === "pt" ? "Entregue e ativo" : "Delivered and live"}
-                </div>
-              </div>
-            </Reveal>
+            <PortfolioCard key={p.title} title={p.title} tag={p.tag} description={p.description} url={p.url} index={i} />
           ))}
         </div>
       </div>

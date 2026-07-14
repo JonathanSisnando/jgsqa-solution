@@ -13,7 +13,7 @@ export interface Translation {
     floating: { text: string }[]
   }
   services: { icon: string; title: string; description: string; price: string; cta: string }[]
-  portfolio: { title: string; tag: string; description: string }[]
+  portfolio: { title: string; tag: string; description: string; url: string }[]
   process: { n: string; title: string; text: string }[]
   technologies: string[]
   faq: { q: string; a: string }[]
@@ -60,9 +60,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       { icon: 'code', title: 'Sistema Personalizado', description: 'Tem uma ideia diferente? Criamos sistemas feitos sob medida para o seu negócio: painéis de controle, sistemas de vendas, agendamentos e o que mais você precisar.', price: 'sob consulta', cta: 'Falar com o time' },
     ],
     portfolio: [
-      { title: 'Controle de Ponto Online', tag: 'Sistema', description: 'Sistema para registrar horário de funcionários com relatórios e localização.' },
-      { title: 'Landing Page Profissional', tag: 'Site', description: 'Site profissional para escritório de advocacia com anúncios no Google.' },
-      { title: 'Portal de Vagas', tag: 'Sistema', description: 'Site de vagas com painel administrativo e candidatura em 1 clique.' },
+      { title: 'Amazonar Comércio', tag: 'Site', description: 'Site institucional para comércio de produtos amazônicos com catálogo online e informações da empresa.', url: 'https://amazonar.com.br' },
+      { title: 'Fisioterapia Domiciliar', tag: 'Landing Page', description: 'Landing page para agendamento de fisioterapia domiciliar em Manaus com formulário de contato.', url: 'https://fisioterapia-domiciliar-manaus.vercel.app' },
+      { title: 'Portal de Vagas', tag: 'Sistema', description: 'Plataforma de vagas de emprego com painel administrativo e candidatura em 1 clique.', url: 'https://vagas-manaus.vercel.app' },
     ],
     process: [
       { n: '01', title: 'Conversa', text: 'Entendemos seu negócio, o que precisa e o que sonha.' },
@@ -123,9 +123,9 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
       { icon: 'code', title: 'Custom System', description: 'Have a different idea? We build custom systems for your business: dashboards, sales systems, scheduling and whatever you need.', price: 'upon request', cta: 'Talk to us' },
     ],
     portfolio: [
-      { title: 'Online Time Clock', tag: 'System', description: 'System to track employee hours with reports and location data.' },
-      { title: 'Professional Landing Page', tag: 'Website', description: 'Professional website for a law firm with Google Ads.' },
-      { title: 'Job Portal', tag: 'System', description: 'Job board with admin panel and 1-click applications.' },
+      { title: 'Amazonar Store', tag: 'Website', description: 'Institutional website for Amazonian products commerce with online catalog and company info.', url: 'https://amazonar.com.br' },
+      { title: 'Home Physiotherapy', tag: 'Landing Page', description: 'Landing page for home physiotherapy scheduling in Manaus with contact form.', url: 'https://fisioterapia-domiciliar-manaus.vercel.app' },
+      { title: 'Job Portal', tag: 'System', description: 'Job board platform with admin panel and 1-click applications.', url: 'https://vagas-manaus.vercel.app' },
     ],
     process: [
       { n: '01', title: 'Chat', text: 'We understand your business, needs and goals.' },

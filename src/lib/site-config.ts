@@ -86,22 +86,25 @@ export const CONFIG = {
   ],
   portfolio: [
     {
-      title: "Controle de Ponto Online",
-      tag: "Sistema",
-      description:
-        "Sistema para registrar horário de funcionários com relatórios e localização.",
-    },
-    {
-      title: "Landing Page Profissional",
+      title: "Amazonar Comércio",
       tag: "Site",
       description:
-        "Site profissional para escritório de advocacia com anúncios no Google.",
+        "Site institucional para comércio de produtos amazônicos com catálogo online e informações da empresa.",
+      url: "https://amazonar.com.br",
+    },
+    {
+      title: "Fisioterapia Domiciliar",
+      tag: "Landing Page",
+      description:
+        "Landing page para agendamento de fisioterapia domiciliar em Manaus com formulário de contato.",
+      url: "https://fisioterapia-domiciliar-manaus.vercel.app",
     },
     {
       title: "Portal de Vagas",
       tag: "Sistema",
       description:
-        "Site de vagas com painel administrativo e candidatura em 1 clique.",
+        "Plataforma de vagas de emprego com painel administrativo e candidatura em 1 clique.",
+      url: "https://vagas-manaus.vercel.app",
     },
   ],
   process: [
