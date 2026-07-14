@@ -250,6 +250,7 @@ function Services() {
 function PortfolioCard({ title, tag, description, url, index }: {
   title: string; tag: string; description: string; url: string; index: number
 }) {
+  const { lang } = useLang();
   const [screenshot, setScreenshot] = useState("");
   const [loaded, setLoaded] = useState(false);
 
