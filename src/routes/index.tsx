@@ -247,19 +247,25 @@ function Services() {
   );
 }
 
+const SCREENSHOT_API = "https://api.microlink.io";
+
 function PortfolioCard({ title, tag, description, url, index }: {
   title: string; tag: string; description: string; url: string; index: number
 }) {
   const { lang } = useLang();
   const [screenshot, setScreenshot] = useState("");
-  const [loaded, setLoaded] = useState(false);
+  const [loadedImg, setLoadedImg] = useState(false);
 
   useEffect(() => {
-    fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false`)
+    let cancelled = false;
+    fetch(`${SCREENSHOT_API}/?url=${encodeURIComponent(url)}&screenshot=true&meta=false`)
       .then((r) => r.json())
-      .then((d) => { if (d?.data?.screenshot?.url) setScreenshot(d.data.screenshot.url); })
+      .then((d) => { if (!cancelled && d?.data?.screenshot?.url) setScreenshot(d.data.screenshot.url); })
       .catch(() => {});
+    return () => { cancelled = true; };
   }, [url]);
+
+  const hostname = url.replace(/^https?:\/\//, "").replace(/\/.*$/, "");
 
   return (
     <Reveal delay={index * 100}>
@@ -270,15 +276,16 @@ function PortfolioCard({ title, tag, description, url, index }: {
               <img
                 src={screenshot}
                 alt={title}
-                onLoad={() => setLoaded(true)}
-                className={`h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${loaded ? "opacity-100" : "opacity-0"}`}
+                onLoad={() => setLoadedImg(true)}
+                className={`absolute inset-0 h-full w-full object-cover object-top transition-all duration-500 group-hover:scale-105 ${loadedImg ? "opacity-100" : "opacity-0"}`}
               />
             )}
-            {!loaded && (
-              <div className="flex h-full items-center justify-center">
-                <Globe size={28} className="text-[var(--foreground)]/20" />
-              </div>
-            )}
+            <div className="flex h-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-[var(--surface-2)] to-[var(--surface)] px-4">
+              <span className="rounded-full bg-[var(--neon)]/10 px-3 py-1 font-mono text-[10px] font-medium tracking-wide text-[var(--neon)]">
+                {hostname}
+              </span>
+              <Globe size={24} className="text-[var(--foreground)]/15" />
+            </div>
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface)]/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute bottom-3 right-3 flex items-center gap-1.5 rounded-full bg-[var(--neon)]/90 px-3 py-1.5 text-[11px] font-semibold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <ArrowRight size={13} /> {lang === "pt" ? "Acessar" : "Visit"}
