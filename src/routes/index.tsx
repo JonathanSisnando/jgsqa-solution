@@ -27,10 +27,10 @@ export const Route = createFileRoute("/")({
   head: () => {
     return {
       meta: [
-        { title: "JGSQA — Sites, Automação e Redes Sociais" },
-        { name: "description", content: "A JGSQA cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco." },
-        { property: "og:title", content: "JGSQA — Sites, Automação e Redes Sociais" },
-        { property: "og:description", content: "A JGSQA cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer." },
+        { title: "KBYTE — Sites, Automação e Redes Sociais" },
+        { name: "description", content: "A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco." },
+        { property: "og:title", content: "KBYTE — Sites, Automação e Redes Sociais" },
+        { property: "og:description", content: "A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer." },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -206,7 +206,7 @@ function Services() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading
           eyebrow="SERVIÇOS"
-          title={lang === "pt" ? "O que a JGSQA faz por você" : "What JGSQA does for you"}
+          title={lang === "pt" ? "O que a KBYTE faz por você" : "What KBYTE does for you"}
           description={lang === "pt" ? "Tudo que sua empresa precisa para crescer na internet — de um jeito simples e sem complicação." : "Everything your business needs to grow online — simple and hassle-free."}
         />
         <div className="grid gap-6 md:grid-cols-4 sm:grid-cols-2">

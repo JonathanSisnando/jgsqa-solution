@@ -13,13 +13,13 @@ const Ctx = createContext<LangCtx>(null!)
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('jgsqa-lang') as Lang) || 'pt'
+      return (localStorage.getItem('kbyte-lang') as Lang) || 'pt'
     }
     return 'pt'
   })
 
   useEffect(() => {
-    localStorage.setItem('jgsqa-lang', lang)
+    localStorage.setItem('kbyte-lang', lang)
     document.documentElement.lang = lang
     document.title = TRANSLATIONS[lang].meta.title
     const meta = document.querySelector('meta[name="description"]')

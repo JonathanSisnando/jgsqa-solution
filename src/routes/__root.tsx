@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "JGSQA — QA, Desenvolvimento e Automação com IA" },
+      { title: "KBYTE — QA, Desenvolvimento e Automação com IA" },
       {
         name: "description",
         content:
-          "JGSQA constrói software de qualidade: automação com IA, landing pages que convertem e sistemas sob medida.",
+          "KBYTE constrói software de qualidade: automação com IA, landing pages que convertem e sistemas sob medida.",
       },
       { name: "theme-color", content: "#00D26A" },
-      { property: "og:site_name", content: "JGSQA Tech Solutions" },
+      { property: "og:site_name", content: "KBYTE Tech Solutions" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "google-site-verification", content: "WM3OPapFJe5xi4XlDz4H3i6hQ-KPmAEUK9piDowmkZM" },

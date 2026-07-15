@@ -6,8 +6,8 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade — JGSQA" },
-      { name: "description", content: "Política de Privacidade da JGSQA Tech Solutions." },
+      { title: "Política de Privacidade — KBYTE" },
+      { name: "description", content: "Política de Privacidade da KBYTE Tech Solutions." },
     ],
     links: [{ rel: "canonical", href: "/privacidade" }],
   }),
@@ -37,8 +37,8 @@ function Privacidade() {
             </h2>
             <p>
               {lang === "pt"
-                ? `A JGSQA Tech Solutions (CNPJ ${t.contact.cnpj}) é responsável pelo tratamento dos dados pessoais coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).`
-                : `JGSQA Tech Solutions (CNPJ ${t.contact.cnpj}) is responsible for the processing of personal data collected on this website, in compliance with Brazilian data protection law (LGPD).`}
+                ? `A KBYTE Tech Solutions (CNPJ ${t.contact.cnpj}) é responsável pelo tratamento dos dados pessoais coletados neste site, em conformidade com a LGPD (Lei nº 13.709/2018).`
+                : `KBYTE Tech Solutions (CNPJ ${t.contact.cnpj}) is responsible for the processing of personal data collected on this website, in compliance with Brazilian data protection law (LGPD).`}
             </p>
           </section>
 

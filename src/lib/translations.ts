@@ -22,18 +22,18 @@ export interface Translation {
 
 export const TRANSLATIONS: Record<Lang, Translation> = {
   pt: {
-    brand: { name: 'JGSQA', subtitle: 'SOLUÇÕES DIGITAIS' },
-    contact: { phone: '5592985194689', phoneDisplay: '(92) 98519-4689', cnpj: '53.827.073/0001-18', email: 'contato@jgsqa.com.br' },
-    meta: { title: 'JGSQA — Sites, Automação e Redes Sociais', description: 'A JGSQA cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco.' },
+    brand: { name: 'KBYTE', subtitle: 'SOLUÇÕES DIGITAIS' },
+    contact: { phone: '5592985194689', phoneDisplay: '(92) 98519-4689', cnpj: '53.827.073/0001-18', email: 'contato@kbyte.com.br' },
+    meta: { title: 'KBYTE — Sites, Automação e Redes Sociais', description: 'A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco.' },
     social: { instagram: 'https://instagram.com', facebook: 'https://facebook.com', googleAds: 'https://ads.google.com' },
     waMessages: {
-      nav: 'Olá! Vim pelo site da JGSQA e gostaria de saber mais.',
-      heroCta: 'Olá! Quero um orçamento com a JGSQA.',
-      heroDuvidas: 'Olá! Tenho dúvidas sobre os serviços da JGSQA.',
+      nav: 'Olá! Vim pelo site da KBYTE e gostaria de saber mais.',
+      heroCta: 'Olá! Quero um orçamento com a KBYTE.',
+      heroDuvidas: 'Olá! Tenho dúvidas sobre os serviços da KBYTE.',
       orcamento: 'Olá! Quero solicitar um orçamento.',
-      ctaFinal: 'Olá! Quero começar meu projeto com a JGSQA.',
+      ctaFinal: 'Olá! Quero começar meu projeto com a KBYTE.',
       ctaDuvidas: 'Olá! Ainda tenho dúvidas antes de contratar.',
-      footer: 'Olá, vim pelo site da JGSQA.',
+      footer: 'Olá, vim pelo site da KBYTE.',
     },
     nav: [
       { label: 'Serviços', href: '#servicos' },
@@ -44,7 +44,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     hero: {
       badge: 'Criamos soluções digitais para o seu negócio.',
       title: 'Sites, automação e redes sociais para sua empresa crescer.',
-      description: 'A JGSQA ajuda empresas como a sua a ter presença na internet. Criamos sites bonitos, automatizamos tarefas repetitivas e cuidamos das suas redes sociais. Tudo feito com qualidade e sem complicação.',
+      description: 'A KBYTE ajuda empresas como a sua a ter presença na internet. Criamos sites bonitos, automatizamos tarefas repetitivas e cuidamos das suas redes sociais. Tudo feito com qualidade e sem complicação.',
       stats: [
         { value: 'Sites', label: 'Profissionais e rápidos' },
         { value: 'Redes', label: 'Gestão completa' },
@@ -80,23 +80,23 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     ],
     ctaFinal: {
       title: 'Pronto para levar seu negócio para a internet?',
-      description: 'Conversa direta, sem enrolação. Orçamento rápido e entrega no prazo. Fale com a JGSQA agora mesmo.',
+      description: 'Conversa direta, sem enrolação. Orçamento rápido e entrega no prazo. Fale com a KBYTE agora mesmo.',
     },
   },
 
   en: {
-    brand: { name: 'JGSQA', subtitle: 'DIGITAL SOLUTIONS' },
-    contact: { phone: '5592985194689', phoneDisplay: '+55 (92) 98519-4689', cnpj: '53.827.073/0001-18', email: 'hello@jgsqa.com' },
-    meta: { title: 'JGSQA — Websites, Automation & Social Media', description: 'JGSQA builds websites, automates tasks and manages social media for your business. Talk to us.' },
+    brand: { name: 'KBYTE', subtitle: 'DIGITAL SOLUTIONS' },
+    contact: { phone: '5592985194689', phoneDisplay: '+55 (92) 98519-4689', cnpj: '53.827.073/0001-18', email: 'hello@kbyte.com' },
+    meta: { title: 'KBYTE — Websites, Automation & Social Media', description: 'KBYTE builds websites, automates tasks and manages social media for your business. Talk to us.' },
     social: { instagram: 'https://instagram.com', facebook: 'https://facebook.com', googleAds: 'https://ads.google.com' },
     waMessages: {
-      nav: 'Hi! I came from JGSQA website and would like to know more.',
-      heroCta: 'Hi! I want a quote from JGSQA.',
-      heroDuvidas: 'Hi! I have some questions about JGSQA services.',
+      nav: 'Hi! I came from KBYTE website and would like to know more.',
+      heroCta: 'Hi! I want a quote from KBYTE.',
+      heroDuvidas: 'Hi! I have some questions about KBYTE services.',
       orcamento: 'Hi! I want to request a quote.',
-      ctaFinal: 'Hi! I want to start my project with JGSQA.',
+      ctaFinal: 'Hi! I want to start my project with KBYTE.',
       ctaDuvidas: 'Hi! I still have questions before hiring.',
-      footer: 'Hi, I came from JGSQA website.',
+      footer: 'Hi, I came from KBYTE website.',
     },
     nav: [
       { label: 'Services', href: '#servicos' },
@@ -107,7 +107,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     hero: {
       badge: 'We create digital solutions for your business.',
       title: 'Websites, automation & social media to grow your business.',
-      description: 'JGSQA helps businesses like yours to have an online presence. We build beautiful websites, automate repetitive tasks, and manage your social media. All done with quality and no hassle.',
+      description: 'KBYTE helps businesses like yours to have an online presence. We build beautiful websites, automate repetitive tasks, and manage your social media. All done with quality and no hassle.',
       stats: [
         { value: 'Sites', label: 'Professional & fast' },
         { value: 'Social', label: 'Full management' },
@@ -143,7 +143,7 @@ export const TRANSLATIONS: Record<Lang, Translation> = {
     ],
     ctaFinal: {
       title: 'Ready to take your business online?',
-      description: 'Direct conversation, straightforward quote, on-time delivery. Talk to JGSQA now.',
+      description: 'Direct conversation, straightforward quote, on-time delivery. Talk to KBYTE now.',
     },
   },
 }

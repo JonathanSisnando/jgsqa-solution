@@ -6,13 +6,13 @@ const doc = new PDFDocument({
   size: "A4",
   margins: { top: 55, bottom: 55, left: 60, right: 60 },
   info: {
-    Title: "Proposta Comercial — Gestão de Redes Sociais com IA | JGSQA",
-    Author: "JGSQA Tech Solutions",
+    Title: "Proposta Comercial — Gestão de Redes Sociais com IA | KBYTE",
+    Author: "KBYTE Tech Solutions",
     Subject: "Proposta Comercial",
   },
 });
 
-const outputPath = path.resolve(__dirname, "../public/proposta-comercial-jgsqa.pdf");
+const outputPath = path.resolve(__dirname, "../public/proposta-comercial-kbyte.pdf");
 doc.pipe(fs.createWriteStream(outputPath));
 
 const PAGE_W = doc.page.width;
@@ -56,7 +56,7 @@ function footer(pageNum) {
   const fy = PAGE_H - 40;
   rect(ML, fy, CW, 1, "#e5e7eb");
   doc.fontSize(7).font("Reg").fillColor(FG_LIGHT);
-  doc.text("JGSQA Tech Solutions  •  CNPJ 53.827.073/0001-18  •  (92) 98519-4689", ML, fy + 8);
+  doc.text("KBYTE Tech Solutions  •  CNPJ 53.827.073/0001-18  •  (92) 98519-4689", ML, fy + 8);
   doc.text(`${String(pageNum).padStart(2, "0")}`, ML + CW - 20, fy + 8, { align: "right" });
 }
 
@@ -82,7 +82,7 @@ for (let i = 0; i < 6; i++) {
 }
 
 doc.fontSize(8).font("Bold").fillColor(G);
-doc.text("JGSQA TECH SOLUTIONS", ML, 100);
+doc.text("KBYTE TECH SOLUTIONS", ML, 100);
 
 doc.fontSize(36).font("Bold").fillColor(FG);
 doc.text("Gestão de Redes Sociais", ML, 170);
@@ -103,7 +103,7 @@ doc.text(`${new Date().toLocaleDateString("pt-BR")}`, ML + 25, 460);
 // Company info at bottom
 rect(ML, 550, CW, 75, SURF);
 doc.fontSize(9).font("Bold").fillColor(FG);
-doc.text("JGSQA Tech Solutions", ML + 20, 566);
+doc.text("KBYTE Tech Solutions", ML + 20, 566);
 doc.fontSize(8).font("Reg").fillColor(FG_MUTED);
 doc.text("CNPJ 53.827.073/0001-18", ML + 20, 586);
 doc.text("jonathansisnando.qa@gmail.com  •  (92) 98519-4689", ML + 20, 604);
@@ -123,7 +123,7 @@ const p1 = "Sua empresa merece ser vista. Em um mundo onde o primeiro contato co
 doc.text(p1, ML, y, { width: CW, lineHeight: 1.7 });
 y += doc.heightOfString(p1, { width: CW }) + 18;
 
-const p2 = "A JGSQA Tech Solutions une tecnologia de ponta e inteligência artificial para cuidar de toda a sua presença digital. Fazemos isso com planejamento, conteúdo relevante e anúncios estratégicos — tudo medido e otimizado para gerar resultados reais.";
+const p2 = "A KBYTE Tech Solutions une tecnologia de ponta e inteligência artificial para cuidar de toda a sua presença digital. Fazemos isso com planejamento, conteúdo relevante e anúncios estratégicos — tudo medido e otimizado para gerar resultados reais.";
 doc.text(p2, ML, y, { width: CW, lineHeight: 1.7 });
 y += doc.heightOfString(p2, { width: CW }) + 18;
 
@@ -456,7 +456,7 @@ doc.fontSize(10).font("Bold").fillColor(FG);
 doc.text("Entre em contato", ML + 30, cy + 25);
 
 doc.fontSize(9).font("Bold").fillColor(FG);
-doc.text("JGSQA Tech Solutions", ML + 30, cy + 55);
+doc.text("KBYTE Tech Solutions", ML + 30, cy + 55);
 doc.fontSize(9).font("Reg").fillColor(FG_MUTED);
 doc.text("CNPJ 53.827.073/0001-18", ML + 30, cy + 72);
 doc.text("", ML + 30, cy + 89);

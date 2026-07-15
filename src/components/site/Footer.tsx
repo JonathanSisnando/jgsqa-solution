@@ -65,7 +65,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-black/5 pt-6 text-xs text-[var(--foreground)]/40 md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} JGSQA. {lang === "pt" ? "Todos os direitos reservados." : "All rights reserved."}</p>
+          <p>© {new Date().getFullYear()} KBYTE. {lang === "pt" ? "Todos os direitos reservados." : "All rights reserved."}</p>
           <a href="/privacidade" className="hover:text-[var(--neon)]">
             {lang === "pt" ? "Política de Privacidade" : "Privacy Policy"}
           </a>

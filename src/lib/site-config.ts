@@ -1,18 +1,18 @@
 export const CONFIG = {
   brand: {
-    name: "JGSQA",
+    name: "KBYTE",
     subtitle: "SOLUÇÕES DIGITAIS",
   },
   contact: {
     phone: "5592985194689",
     phoneDisplay: "(92) 98519-4689",
     cnpj: "53.827.073/0001-18",
-    email: "contato@jgsqa.com.br",
+    email: "contato@kbyte.com.br",
   },
   meta: {
-    title: "JGSQA — Sites, Automação e Redes Sociais",
+    title: "KBYTE — Sites, Automação e Redes Sociais",
     description:
-      "A JGSQA cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco no WhatsApp.",
+      "A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco no WhatsApp.",
   },
   social: {
     instagram: "https://instagram.com",
@@ -20,13 +20,13 @@ export const CONFIG = {
     googleAds: "https://ads.google.com",
   },
   waMessages: {
-    nav: "Olá! Vim pelo site da JGSQA e gostaria de saber mais.",
-    heroCta: "Olá! Quero um orçamento com a JGSQA.",
-    heroDuvidas: "Olá! Tenho dúvidas sobre os serviços da JGSQA.",
+    nav: "Olá! Vim pelo site da KBYTE e gostaria de saber mais.",
+    heroCta: "Olá! Quero um orçamento com a KBYTE.",
+    heroDuvidas: "Olá! Tenho dúvidas sobre os serviços da KBYTE.",
     orcamento: "Olá! Quero solicitar um orçamento.",
-    ctaFinal: "Olá! Quero começar meu projeto com a JGSQA.",
+    ctaFinal: "Olá! Quero começar meu projeto com a KBYTE.",
     ctaDuvidas: "Olá! Ainda tenho dúvidas antes de contratar.",
-    footer: "Olá, vim pelo site da JGSQA.",
+    footer: "Olá, vim pelo site da KBYTE.",
   },
   nav: [
     { label: "Serviços", href: "#servicos" },
@@ -38,7 +38,7 @@ export const CONFIG = {
     badge: "Criamos soluções digitais para o seu negócio.",
     title: "Sites, automação e redes sociais para sua empresa crescer.",
     description:
-      "A JGSQA ajuda empresas como a sua a ter presença na internet. Criamos sites bonitos, automatizamos tarefas repetitivas e cuidamos das suas redes sociais. Tudo feito com qualidade e sem complicação.",
+      "A KBYTE ajuda empresas como a sua a ter presença na internet. Criamos sites bonitos, automatizamos tarefas repetitivas e cuidamos das suas redes sociais. Tudo feito com qualidade e sem complicação.",
     stats: [
       { value: "Sites", label: "Profissionais e rápidos" },
       { value: "Redes", label: "Gestão completa" },
@@ -142,7 +142,7 @@ export const CONFIG = {
   ctaFinal: {
     title: "Pronto para levar seu negócio para a internet?",
     description:
-      "Conversa direta, sem enrolação. Orçamento rápido e entrega no prazo. Fale com a JGSQA agora mesmo.",
+      "Conversa direta, sem enrolação. Orçamento rápido e entrega no prazo. Fale com a KBYTE agora mesmo.",
   },
 } as const;
 

@@ -6,8 +6,8 @@ const doc = new PDFDocument({
   size: "A4",
   margins: { top: 50, bottom: 50, left: 50, right: 50 },
   info: {
-    Title: "Gestão de Redes Sociais com IA — JGSQA",
-    Author: "JGSQA Tech Solutions",
+    Title: "Gestão de Redes Sociais com IA — KBYTE",
+    Author: "KBYTE Tech Solutions",
     Subject: "Proposta de Serviços",
   },
 });
@@ -50,7 +50,7 @@ for (let i = 0; i < 200; i++) {
 doc.save().rect(PAGE_W / 2 - 70, 140, 140, 3).fill(NEON).restore();
 
 doc.fontSize(60).font("Bold").fillColor(NEON);
-doc.text("JGSQA", PAGE_W / 2, 160, { align: "center" });
+doc.text("KBYTE", PAGE_W / 2, 160, { align: "center" });
 
 doc.fontSize(11).font("Regular").fillColor(TEXT_MUTED);
 doc.text("TECH SOLUTIONS", PAGE_W / 2, 220, { align: "center" });
@@ -66,9 +66,9 @@ doc.text("Sua presença digital funcionando sozinha — enquanto você cuida do 
 doc.save().rect(PAGE_W / 2 - 70, 480, 140, 3).fill(NEON).restore();
 
 doc.fontSize(10).font("Regular").fillColor(TEXT_MUTED);
-doc.text("JGSQA Tech Solutions  •  CNPJ 53.827.073/0001-18", PAGE_W / 2, 520, { align: "center" });
-doc.text("contato@jgsqa.com.br  •  (92) 98519-4689", PAGE_W / 2, 538, { align: "center" });
-doc.text("jgsqa.com.br", PAGE_W / 2, 556, { align: "center" });
+doc.text("KBYTE Tech Solutions  •  CNPJ 53.827.073/0001-18", PAGE_W / 2, 520, { align: "center" });
+doc.text("contato@kbyte.com.br  •  (92) 98519-4689", PAGE_W / 2, 538, { align: "center" });
+doc.text("kbyte.com.br", PAGE_W / 2, 556, { align: "center" });
 
 // Page 2: O que eu faço
 doc.addPage({ size: "A4" });
@@ -273,9 +273,9 @@ doc.text("* Verba de anúncios (R$ 300 a R$ 500/mês) é paga separadamente pelo
 // Footer
 rect(0, PAGE_H - 80, PAGE_W, 80, SURFACE);
 doc.fontSize(11).font("Bold").fillColor(NEON);
-doc.text("JGSQA Tech Solutions", MARGIN, PAGE_H - 62);
+doc.text("KBYTE Tech Solutions", MARGIN, PAGE_H - 62);
 doc.fontSize(9).font("Regular").fillColor(TEXT_MUTED);
-doc.text("contato@jgsqa.com.br  •  (92) 98519-4689  •  jgsqa.com.br", MARGIN, PAGE_H - 42);
+doc.text("contato@kbyte.com.br  •  (92) 98519-4689  •  kbyte.com.br", MARGIN, PAGE_H - 42);
 doc.text("CNPJ 53.827.073/0001-18", MARGIN, PAGE_H - 26);
 
 doc.end();
