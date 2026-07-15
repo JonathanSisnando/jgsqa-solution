@@ -86,10 +86,10 @@ export const CONFIG = {
   ],
   portfolio: [
     {
-      title: "Amazonar Comércio",
+      title: "AmazonAr Climatização",
       tag: "Site",
       description:
-        "Site institucional para comércio de produtos amazônicos com catálogo online e informações da empresa.",
+        "Site institucional para serviços de climatização com catálogo online e informações da empresa.",
       url: "https://amazonar.com.br",
     },
     {
