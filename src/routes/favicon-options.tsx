@@ -84,6 +84,158 @@ const options = [
       <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="${NEON}">K</text>
     </svg>`,
   },
+  {
+    name: "K Pixel",
+    desc: "K em estilo pixel art 8-bit",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <rect x="16" y="16" width="2" height="2" fill="${NEON}"/>
+      <rect x="18" y="16" width="2" height="2" fill="${NEON}"/>
+      <rect x="14" y="18" width="2" height="2" fill="${NEON}"/>
+      <rect x="18" y="18" width="2" height="2" fill="${NEON}"/>
+      <rect x="12" y="20" width="2" height="2" fill="${NEON}"/>
+      <rect x="14" y="20" width="2" height="2" fill="${NEON}"/>
+      <rect x="18" y="20" width="2" height="2" fill="${NEON}"/>
+      <rect x="10" y="22" width="2" height="2" fill="${NEON}"/>
+      <rect x="12" y="22" width="2" height="2" fill="${NEON}"/>
+      <rect x="18" y="22" width="2" height="2" fill="${NEON}"/>
+      <rect x="10" y="24" width="2" height="2" fill="${NEON}"/>
+      <rect x="18" y="24" width="2" height="2" fill="${NEON}"/>
+    </svg>`,
+  },
+  {
+    name: "K Gradient",
+    desc: "K com gradiente neon-azul",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <linearGradient id="kg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="${NEON}"/>
+          <stop offset="100%" stop-color="#2563eb"/>
+        </linearGradient>
+      </defs>
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="url(#kg)">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Outline",
+    desc: "K apenas contorno fino",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="transparent"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="400" font-size="22" fill="none" stroke="${NEON}" stroke-width="1.5">K</text>
+    </svg>`,
+  },
+  {
+    name: "$ K",
+    desc: "K como prompt de terminal",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="8" y="23" font-family="monospace" font-weight="700" font-size="14" fill="${NEON}">$ K</text>
+      <rect x="6" y="9" width="2" height="14" rx="0.5" fill="${NEON}" opacity="0.5">
+        <animate attributeName="opacity" values="0;1;0" dur="0.8s" repeatCount="indefinite"/>
+      </rect>
+    </svg>`,
+  },
+  {
+    name: "K Hex",
+    desc: "K em hexágono neon",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <polygon points="16,2 28,8 28,24 16,30 4,24 4,8" fill="${BG}" stroke="${NEON}" stroke-width="1.5"/>
+      <text x="16" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="${NEON}">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Circuit",
+    desc: "K com traços de circuito",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="${NEON}">K</text>
+      <circle cx="26" cy="6" r="1.5" fill="${NEON}" opacity="0.6"/>
+      <circle cx="6" cy="26" r="1.5" fill="${NEON}" opacity="0.6"/>
+      <line x1="24.5" y1="7.5" x2="18" y2="12" stroke="${NEON}" stroke-width="0.6" opacity="0.3"/>
+      <line x1="7.5" y1="24.5" x2="14" y2="18" stroke="${NEON}" stroke-width="0.6" opacity="0.3"/>
+    </svg>`,
+  },
+  {
+    name: "K Bracket",
+    desc: "[K] com colchetes",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="${NEON}">[K]</text>
+    </svg>`,
+  },
+  {
+    name: "K Glow",
+    desc: "K com brilho neon difuso",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="22" fill="${NEON}" filter="url(#glow)">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Diamond",
+    desc: "K em losango verde",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <polygon points="16,2 28,16 16,30 4,16" fill="${NEON}"/>
+      <text x="16" y="21" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="${BG}">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Corner",
+    desc: "K minimalista no canto",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="6" y="12" font-family="Arial,sans-serif" font-weight="700" font-size="11" fill="${NEON}">K</text>
+      <rect x="0" y="0" width="4" height="4" rx="0.5" fill="${NEON}" opacity="0.6"/>
+      <rect x="28" y="0" width="4" height="4" rx="0.5" fill="${NEON}" opacity="0.6"/>
+      <rect x="0" y="28" width="4" height="4" rx="0.5" fill="${NEON}" opacity="0.6"/>
+      <rect x="28" y="28" width="4" height="4" rx="0.5" fill="${NEON}" opacity="0.6"/>
+    </svg>`,
+  },
+  {
+    name: "K Speed",
+    desc: "K com traços de movimento",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="20" fill="${NEON}">K</text>
+      <line x1="24" y1="6" x2="28" y2="6" stroke="${NEON}" stroke-width="0.8" opacity="0.5"/>
+      <line x1="22" y1="9" x2="28" y2="9" stroke="${NEON}" stroke-width="0.8" opacity="0.3"/>
+      <line x1="20" y1="12" x2="26" y2="12" stroke="${NEON}" stroke-width="0.8" opacity="0.2"/>
+    </svg>`,
+  },
+  {
+    name: "K Shield",
+    desc: "K em escudo verde",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path d="M16 2 L28 8 L28 18 Q28 26 16 30 Q4 26 4 18 L4 8 Z" fill="${BG}" stroke="${NEON}" stroke-width="1.5"/>
+      <text x="16" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="16" fill="${NEON}">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Morse",
+    desc: "K em código morse",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <rect x="10" y="8" width="12" height="3" rx="1" fill="${NEON}"/>
+      <rect x="10" y="14" width="4" height="3" rx="1" fill="${NEON}"/>
+      <rect x="10" y="20" width="12" height="3" rx="1" fill="${NEON}"/>
+      <text x="16" y="31" text-anchor="middle" font-family="Arial,sans-serif" font-size="5" fill="${NEON}" opacity="0.4">K</text>
+    </svg>`,
+  },
+  {
+    name: "K Mono",
+    desc: "K em fonte monoespaçada bold",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="${BG}"/>
+      <text x="16" y="23" text-anchor="middle" font-family="Courier,monospace" font-weight="900" font-size="22" fill="${NEON}">K</text>
+    </svg>`,
+  },
 ];
 
 function FaviconOptions() {
