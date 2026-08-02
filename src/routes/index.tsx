@@ -13,6 +13,9 @@ import {
   Globe,
   Smartphone,
   BarChart3,
+  MousePointerClick,
+  Eye,
+  TrendingUp,
 } from "lucide-react";
 import { waLink } from "@/lib/site-config";
 import { useLang, LangProvider } from "@/lib/LanguageContext";
@@ -27,10 +30,10 @@ export const Route = createFileRoute("/")({
   head: () => {
     return {
       meta: [
-        { title: "KBYTE — Sites, Automação e Redes Sociais" },
-        { name: "description", content: "A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer. Fale conosco." },
-        { property: "og:title", content: "KBYTE — Sites, Automação e Redes Sociais" },
-        { property: "og:description", content: "A KBYTE cria sites, automatiza tarefas e gerencia redes sociais para sua empresa crescer." },
+        { title: "KBYTE — Marketing Digital e Tráfego Pago em Manaus" },
+        { name: "description", content: "Gestão de tráfego pago (Google Ads), Instagram e sites para pequenas e médias empresas de Manaus atraírem mais clientes. Fale com a KBYTE." },
+        { property: "og:title", content: "KBYTE — Marketing Digital e Tráfego Pago em Manaus" },
+        { property: "og:description", content: "Gestão de tráfego pago (Google Ads), Instagram e sites para pequenas e médias empresas de Manaus atraírem mais clientes. Fale com a KBYTE." },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
       ],
@@ -90,6 +93,7 @@ function Index() {
         <Hero />
         <Services />
         <Portfolio />
+        <Results />
         <Process />
         <Technologies />
         <FAQ />
@@ -138,7 +142,7 @@ function Hero() {
               className="btn-neon"
             >
               <MessageCircle size={18} strokeWidth={2.5} />
-              {lang === "pt" ? "Quero um orçamento" : "Get a quote"}
+              {lang === "pt" ? "Quero atrair mais clientes" : "I want more customers"}
             </a>
             <a href="#servicos" className="btn-ghost">
               {lang === "pt" ? "Ver serviços" : "View services"} <ArrowRight size={16} />
@@ -321,6 +325,38 @@ function Portfolio() {
           {t.portfolio.map((p: typeof t.portfolio[0], i: number) => (
             <PortfolioCard key={p.title} title={p.title} tag={p.tag} description={p.description} url={p.url} index={i} />
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const resultIcons = [MousePointerClick, Eye, MessageCircle, TrendingUp];
+
+function Results() {
+  const { t } = useLang();
+  return (
+    <section id="resultados" className="relative py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <SectionHeading
+          eyebrow={t.results.eyebrow}
+          title={t.results.title}
+          description={t.results.description}
+        />
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+          {t.results.items.map((label: string, i: number) => {
+            const Icon = resultIcons[i] || MousePointerClick;
+            return (
+              <Reveal key={label} delay={i * 100}>
+                <div className="card-surface card-hover card-top-bar flex flex-col items-center gap-3 p-7 text-center">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--neon-soft)] text-[var(--neon)]">
+                    <Icon size={22} strokeWidth={2} />
+                  </div>
+                  <span className="font-display text-lg font-bold">{label}</span>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
